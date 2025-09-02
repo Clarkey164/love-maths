@@ -156,4 +156,10 @@ function displayDivisionQuestion(operand1, operand2) {
     document.getElementById("operand1").textContent = operand1;
     document.getElementById("operand2").textContent = operand2;
     document.getElementById("operator").textContent = "/";
+
+    // Ensure we don't have any remainders
+    if (operand1 % operand2 !== 0) {
+        operand1 = operand1 * operand2;
+        document.getElementById("operand1").textContent = operand1;
+    }
 }
