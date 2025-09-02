@@ -109,6 +109,11 @@ function incrementWrongAnswer() {
     document.getElementById("incorrect").innerText = ++oldScore;
 }   
 
+/**
+ * The following functions all display a different game question,
+ * depending on the game type
+ */
+
 function displayAdditionQuestion(operand1, operand2) {
     document.getElementById("operand1").textContent = operand1;
     document.getElementById("operand2").textContent = operand2;
