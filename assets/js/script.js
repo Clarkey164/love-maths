@@ -32,6 +32,12 @@ function runGame(gameType) {
 
     if (gameType === "Addition") {
         displayAdditionQuestion(num1, num2);
+    } else if (gameType === "Subtract") {
+        displaySubtractQuestion(num1, num2);
+    } else if (gameType === "Multiply") {
+        displayMultiplyQuestion(num1, num2);
+    } else if (gameType === "Division") {
+        displayDivisionQuestion(num1, num2);
     } else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
@@ -73,6 +79,12 @@ function calculateCorrectAnswer() {
 
     if (operator === "+") {
         return [operand1 + operand2, "Addition"];
+    } else if (operator === "-") {
+        return [operand1 - operand2, "Subtract"]; 
+    } else if (operator === "x") {
+        return [operand1 * operand2, "Multiply"];
+    } else if (operator === "/") {
+        return [Math.floor(operand1 / operand2), "Division"];
     } else {
         alert(`Unimplemented operator ${operator}`);
         throw `Unimplemented operator ${operator}. Aborting!`;
